@@ -1,84 +1,84 @@
 **Read this in other languages:**
-[English](README.md) | [中文](README_zh.md)
+[English](README_en.md) | [中文](README.md)
 
-# CUIT Golang Training Project Repository
+# CUIT Golang 教学训练项目仓库
 
-## Repository Overview
+## 仓库介绍
 
-Welcome to cuit-golang-training-project! This is a dedicated Golang teaching repository for faculty and students of Chengdu University of Information Technology (CUIT), designed to be a one-stop learning platform for Go language from entry to proficiency.
+欢迎来到 cuit-golang-training-project！这是一个面向成都信息工程大学（CUIT）师生的 Golang 专属教学仓库，致力于打造从入门到精通的一站式 Go 语言学习平台。
 
-Whether you are a beginner just starting with Go or an advanced learner looking to improve engineering practice capabilities, you can find suitable learning resources here. The content is structured from basic to advanced, covering basic syntax, core features, standard library usage, framework applications, and complete project development. All demos are accompanied by detailed comments and documentation, facilitating self-directed learning and teaching.
+无论是刚开始接触 Go 语言的新手，还是希望提升工程实践能力的进阶学习者，都能在这里找到适配的学习资源。仓库内容由浅入深、层层递进，涵盖基础语法、核心特性、标准库使用、框架应用及完整项目开发，所有 Demo 均配套详细注释和文档说明，方便自主学习与教学使用。
 
-## Repository Structure
+## 仓库结构
 
 ```
 cuit-golang-training-project/
-├── 01-go-basics/          # Go basic syntax (variables, loops, functions, interfaces, etc.)
-│   ├── demo-xxx/          # Single basic knowledge point demo
-│   └── README.md          # Learning guide for basics
-├── 02-go-core/            # Go core features (concurrency, channels, goroutines, reflection, etc.)
+├── 01-go-basics/          # Go 基础语法教学（变量、循环、函数、接口等）
+│   ├── demo-xxx/          # 单个基础知识点 Demo
+│   └── README.md          # 基础部分学习指南
+├── 02-go-core/            # Go 核心特性（并发、通道、goroutine、反射等）
 │   ├── demo-xxx/
 │   └── README.md
-├── 03-go-standard-lib/    # Standard library practice (file operations, network programming, JSON processing, etc.)
+├── 03-go-standard-lib/    # 标准库实战（文件操作、网络编程、JSON 处理等）
 │   ├── demo-xxx/
 │   └── README.md
-├── 04-go-frameworks/     # Mainstream framework applications (Gin, Beego, gRPC, etc.)
+├── 04-go-frameworks/     # 主流框架应用（Gin、Beego、gRPC 等）
 │   ├── demo-xxx/
 │   └── README.md
-├── 05-complete-projects/  # Complete project cases (Web services, tools, microservices, etc.)
+├── 05-complete-projects/  # 完整项目案例（Web 服务、工具类、微服务等）
 │   ├── project-xxx/
 │   └── README.md
-├── docs/                  # Supporting documents (learning path, FAQs, practical skills, etc.)
-└── LICENSE                # Open source license
+├── docs/                  # 配套文档（学习路线、常见问题、实战技巧等）
+└── LICENSE                # 开源协议
 ```
 
-## Target Audience
+## 适用人群
 
-- Undergraduates and postgraduates of Chengdu University of Information Technology (CUIT) learning Go language
+- 成都信息工程大学（CUIT）学习 Go 语言的本科生、研究生
 
-- Programming enthusiasts who want to systematically learn Go language
+- 希望系统学习 Go 语言的编程爱好者
 
-- Teachers engaged in Go language teaching (can be used as supporting teaching resources)
+- 从事 Go 语言教学的教师（可作为教学配套资源）
 
-## Learning Suggestions
+## 学习建议
 
-Learn in directory order: Start with 01-go-basics and gradually master basic syntax and core features
+按目录顺序学习：从 01-go-basics 开始，逐步掌握基础语法和核心特性
 
-Hands-on practice: Run and modify the code of each demo locally to deepen understanding
+动手实践：每个 Demo 都建议本地运行、修改代码，加深理解
 
-Refer to documents: The docs directory provides learning paths and FAQs; check first when encountering problems
+参考文档：docs 目录提供学习路线和常见问题解答，遇到问题可先查阅
 
-Participate in practical projects: After mastering the basics, try running the complete projects in 05-complete-projects to improve engineering capabilities
+参与实战：基础掌握后，尝试运行 05-complete-projects 中的完整项目，提升工程能力
 
-## How to Use
+## 如何使用
 
-Clone the repository to your local machine:
+克隆仓库到本地：
 
 ```
-git clone https://github.com/your-username/cuit-golang-training-project.git
+git clone https://github.com/GoFUrry/cuit-golang-training-project.git
 ```
 
-Enter the corresponding directory and run the demo:
+进入对应目录，运行 Demo：
 
 ```
 cd cuit-golang-training-project/01-go-basics/demo-hello
 go run main.go
 ```
 
-Access documents: Directly open the Markdown files in the docs directory to read
+1. 查阅文档：直接打开 docs 目录下的 Markdown 文件阅读
 
-## Contribution Guidelines
+## 贡献指南
 
-Contributions from CUIT faculty and students are welcome:
+欢迎 CUIT 师生参与仓库完善：
 
-Fork this repository
+Fork 本仓库
 
-Create a branch (feature/xxx or bugfix/xxx)
+创建分支
 
-Commit code (including complete demos and documentation)
+提交代码（需包含完整 Demo 和文档说明）
 
-Initiate a Pull Request with a description of the modifications
+发起 Pull Request，说明修改内容
 
-## License
+## 许可证
 
-This repository is licensed under the [MIT License](LICENSE), allowing non-commercial use, modification, and distribution.
+本仓库采用 [M](LICENSE)[IT Li](LICENSE)[cense](LICENSE) 开源协议，允许非商业性使用、修改和分发。
