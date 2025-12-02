@@ -13,22 +13,25 @@
 
 ```
 cuit-golang-training-project/
-├── 01-go-basics/          # Go 基础语法教学（变量、循环、函数、接口等）
+├── 01-go-basics/          # Go 基础语法教学
 │   ├── demo-xxx/          # 单个基础知识点 Demo
 │   └── README.md          # 基础部分学习指南
-├── 02-go-core/            # Go 核心特性（并发、通道、goroutine、反射等）
+├── 02-go-core/            # Go 核心特性
 │   ├── demo-xxx/
 │   └── README.md
-├── 03-go-standard-lib/    # 标准库实战（文件操作、网络编程、JSON 处理等）
+├── 03-go-standard-lib/    # 标准库实战
 │   ├── demo-xxx/
 │   └── README.md
-├── 04-go-frameworks/     # 主流框架应用（Gin、Beego、gRPC 等）
+├── 04-go-frameworks/      # 主流框架应用
 │   ├── demo-xxx/
 │   └── README.md
-├── 05-complete-projects/  # 完整项目案例（Web 服务、工具类、微服务等）
+├── 05-complete-projects/  # 完整项目案例
 │   ├── project-xxx/
 │   └── README.md
-├── docs/                  # 配套文档（学习路线、常见问题、实战技巧等）
+├── 06-coding-exercises/   # 编程刷题&面试题专区（核心新增目录）
+│   ├── 01-leetcode/       # 力扣 Go 题解
+│   └── 02-interview-questions/  # Go 面试题 & 编程场景题
+├── docs/                  # 配套文档
 └── LICENSE                # 开源协议
 ```
 

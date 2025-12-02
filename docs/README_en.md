@@ -13,23 +13,26 @@ Whether you are a beginner just starting with Go or an advanced learner looking 
 
 ```
 cuit-golang-training-project/
-├── 01-go-basics/          # Go basic syntax (variables, loops, functions, interfaces, etc.)
-│   ├── demo-xxx/          # Single basic knowledge point demo
-│   └── README.md          # Learning guide for basics
-├── 02-go-core/            # Go core features (concurrency, channels, goroutines, reflection, etc.)
+├── 01-go-basics/          # Go Basic Syntax Teaching
+│   ├── demo-xxx/          # Single Basic Knowledge Point Demo
+│   └── README.md          # Basics Learning Guide
+├── 02-go-core/            # Go Core Features
 │   ├── demo-xxx/
 │   └── README.md
-├── 03-go-standard-lib/    # Standard library practice (file operations, network programming, JSON processing, etc.)
+├── 03-go-standard-lib/    # Standard Library Practice
 │   ├── demo-xxx/
 │   └── README.md
-├── 04-go-frameworks/     # Mainstream framework applications (Gin, Beego, gRPC, etc.)
+├── 04-go-frameworks/      # Mainstream Framework Applications
 │   ├── demo-xxx/
 │   └── README.md
-├── 05-complete-projects/  # Complete project cases (Web services, tools, microservices, etc.)
+├── 05-complete-projects/  # Complete Project Cases
 │   ├── project-xxx/
 │   └── README.md
-├── docs/                  # Supporting documents (learning path, FAQs, practical skills, etc.)
-└── LICENSE                # Open source license
+├── 06-coding-exercises/   # Coding Practice & Interview Questions Zone
+│   ├── 01-leetcode/       # LeetCode Go Solutions
+│   └── 02-interview-questions/  # Go Interview Questions & Programming Scenario Problems
+├── docs/                  # Supporting Documents
+└── LICENSE                # Open Source License
 ```
 
 ## Target Audience
