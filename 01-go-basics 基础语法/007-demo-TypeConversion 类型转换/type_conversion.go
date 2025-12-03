@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math"
 	"reflect"
+	"strconv"
 )
 
 /**
@@ -28,4 +29,17 @@ func main() {
 	// 浮点数转整数只会保留整数部分
 	pi := math.Pi
 	fmt.Println(int(pi)) // 3
+
+	// 字符串转数值类型
+	intNumber1, _ := strconv.Atoi("8848")
+	intNumber2, _ := strconv.ParseInt("4399", 10, 64)
+	intNumber3, _ := strconv.ParseFloat("3.1415926", 64)
+	fmt.Println(intNumber1, intNumber2, intNumber3)                                                 // 8848 4399 3.1415926
+	fmt.Println(reflect.TypeOf(intNumber1), reflect.TypeOf(intNumber2), reflect.TypeOf(intNumber3)) // int int64 float64
+
+	// 数值类型转字符串
+	strNumber1 := strconv.FormatInt(007, 10)
+	strNumber2 := fmt.Sprintf("%d", 996)
+	fmt.Println(strNumber1, strNumber2)                                 // 007 996
+	fmt.Println(reflect.TypeOf(strNumber1), reflect.TypeOf(strNumber2)) // string string
 }
