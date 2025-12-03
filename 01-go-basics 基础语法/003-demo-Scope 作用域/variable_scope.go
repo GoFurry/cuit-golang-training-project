@@ -19,7 +19,7 @@ import "fmt"
 // 实际开发中并不需要刻意的实现变量的逃逸行为 (栈上的变量逃逸到堆上)
 // 但逃逸的变量需要额外分配内存, 对性能优化可能会产生细微的影响
 // 逃逸分析 go run -gcflags=-m ./variable_scope.go
-
+ 
 var globalA = 10
 
 func main() {
