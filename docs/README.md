@@ -84,4 +84,4 @@ Fork 本仓库
 
 ## 许可证
 
-本仓库采用 [M](LICENSE)[IT Li](LICENSE)[cense](LICENSE) 开源协议，允许非商业性使用、修改和分发。
+本仓库采用 [MIT License](LICENSE) 开源协议，允许非商业性使用、修改和分发。
