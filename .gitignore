@@ -1,0 +1,30 @@
+# IDE / editor
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Go build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+coverage.out
+*.coverprofile
+
+# Common build output directories
+bin/
+dist/
+build/bin/
+
+# Frontend dependencies and generated assets
+node_modules/
+frontend/dist/
+
+# Logs
+*.log

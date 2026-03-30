@@ -1,246 +1,145 @@
 **Read this in other languages:**
 [English](README_en.md) | [中文](README.md)
 
-# 04-go-frameworks: Go Mainstream Frameworks Module
-## Module Description
-This directory covers mainstream frameworks in the Go ecosystem, from web development to microservices, from command-line tools to desktop applications, providing a complete framework learning path. Each framework comes with independent runnable demos showcasing core features and practical application scenarios.
-## Topics and Directory Structure
+# 04-go-frameworks: Mainstream Go Frameworks
+
+## Module Overview
+
+This chapter focuses on the Go frameworks and toolchains that are most useful for day-one learning. Instead of building oversized production scaffolds, it provides a set of runnable, comparable, teaching-friendly demos.
+
+Every demo that depends on third-party packages is organized as an independent Go module and locked with:
+
+```go
+go 1.26
+toolchain go1.26.0
 ```
-04-go-frameworks/
+
+This keeps dependencies isolated and makes each example easy to run on its own.
+
+## Directory Layout
+
+```text
+04-go-frameworks Mainstream Frameworks/
 ├── 01-web-frameworks Web Frameworks/
+│   ├── 001-demo-gin
+│   ├── 002-demo-echo
+│   ├── 003-demo-fiber
+│   └── 004-demo-chi
 ├── 02-microservices Microservice Frameworks/
-├── 03-high-performance-http High-Performance HTTP Frameworks/
+│   └── 001-demo-grpc
+├── 03-high-performance-http High-Performance HTTP/
+│   └── 001-demo-fasthttp
 ├── 04-cli-frameworks CLI Frameworks/
+│   └── 001-demo-cobra
 ├── 05-gui-frameworks GUI Frameworks/
+│   └── 001-demo-wails
 ├── 06-crawler-frameworks Crawler Frameworks/
+│   └── 001-demo-colly
 ├── 07-orm-frameworks ORM Frameworks/
+│   ├── 001-demo-gorm
+│   └── 002-demo-xorm
 └── 08-testing-frameworks Testing Frameworks/
+    ├── 001-demo-testify
+    └── 002-demo-goconvey
 ```
-## Demo List by Topic
+
+## Demo List
+
 ### 01-web-frameworks Web Frameworks
-- Gin (Most popular lightweight web framework)
-- Echo (High-performance web framework)
-- Fiber (Express.js-style web framework)
-- Chi (Lightweight router)
+
+- `001-demo-gin`: routing, middleware, JSON binding, API responses
+- `002-demo-echo`: context-based handlers, parameter parsing, error handling
+- `003-demo-fiber`: Express-style API and fast HTTP handling
+- `004-demo-chi`: lightweight router with standard-library-friendly middleware
+
 ### 02-microservices Microservice Frameworks
-- gRPC (Google's high-performance RPC framework)
-- Kratos (Bilibili's open-source microservice framework)
-- Kitex (ByteDance's microservice RPC framework)
-- go-zero (Microservice framework)
-### 03-high-performance-http High-Performance HTTP Frameworks
-- gnet (Event-driven networking framework)
-- fasthttp (High-performance HTTP implementation)
+
+- `001-demo-grpc`: define services with `proto3` and run client/server code generated from protobuf
+
+### 03-high-performance-http High-Performance HTTP
+
+- `001-demo-fasthttp`: learn a lower-level high-performance HTTP handler style
+
 ### 04-cli-frameworks CLI Frameworks
-- Cobra (Powerful CLI application builder)
+
+- `001-demo-cobra`: multi-command CLI app with flags and help output
+
 ### 05-gui-frameworks GUI Frameworks
-- Wails (Modern desktop application development framework)
+
+- `001-demo-wails`: desktop app development using Go plus a frontend stack
+
 ### 06-crawler-frameworks Crawler Frameworks
-- Colly (Elegant web scraping framework)
+
+- `001-demo-colly`: scrape a local test website to learn selectors, links, and extraction
+
 ### 07-orm-frameworks ORM Frameworks
-- GORM (Feature-complete ORM library)
-- XORM (Simple and powerful ORM engine)
+
+- `001-demo-gorm`: model definition, migration, insert, query, update
+- `002-demo-xorm`: compare another ORM style built around engine/session usage
+
 ### 08-testing-frameworks Testing Frameworks
-- Testify (Rich testing toolkit)
-- GoConvey (BDD-style testing framework)
+
+- `001-demo-testify`: assertions, error checks, and test structure
+- `002-demo-goconvey`: BDD-style testing syntax
+
 ## How to Run
-### 1. Run Individual Demo
-```
-# Example: Run Gin demo
-cd 01-web-frameworks Web Frameworks/001-demo-gin
+
+### 1. Run Web / HTTP / CLI / ORM / Crawler demos
+
+```bash
+cd "01-web-frameworks Web框架/001-demo-gin"
 go mod tidy
-go run main.go
+go run .
 ```
-### 2. Microservice Demos
+
+### 2. Run the gRPC demo
+
+Generate protobuf code first, then start the server:
+
+```bash
+cd "02-microservices 微服务框架/001-demo-grpc"
+go generate ./...
+go mod tidy
+go run ./server
 ```
-# gRPC requires code generation first
-cd 02-microservices Microservice Frameworks/001-demo-grpc
-go generate
-go run server/main.go
-# Run client in another terminal
-go run client/main.go
+
+In another terminal:
+
+```bash
+cd "02-microservices 微服务框架/001-demo-grpc"
+go run ./client
 ```
-### 3. GUI Application Demo
+
+### 3. Run testing demos
+
+```bash
+cd "08-testing-frameworks 测试框架/001-demo-testify"
+go mod tidy
+go test ./...
 ```
-cd 05-gui-frameworks GUI Frameworks/001-demo-wails
-wails build
-# Or development mode
+
+### 4. Run the Wails demo
+
+```bash
+cd "05-gui-frameworks GUI框架/001-demo-wails"
+go mod tidy
 wails dev
 ```
-## Learning Recommendations
-- Start with Gin for web frameworks, then learn other frameworks after mastering basic concepts.
-- Microservice frameworks require understanding RPC concepts first; recommend starting with gRPC.
-- High-performance frameworks are suitable for learners with some foundation; focus on understanding performance optimization approaches.
-- GUI and crawler frameworks can be learned selectively based on actual needs.
-- ORM frameworks should be combined with database practice; master SQL basics first.
-## Supporting Resources
-- Official documentation links for each framework
-- Performance comparison test results
-- Best practice guides
-```
 
-### USER
-给我可下载版本的README.md和README_en.md
+## Learning Path
 
-### ASSISTANT
-**README.md**
+- Start with `Gin`, then compare it with `Echo`, `Fiber`, and `Chi`.
+- Learn `gRPC` before moving to engineering-heavy frameworks like Kratos, Kitex, or go-zero.
+- Practice ORM examples together with SQLite or MySQL so the abstraction makes sense.
+- Use testing frameworks together with the standard `testing` package instead of treating them as magic.
+- Treat Wails as a practical first step into GUI development from the Go ecosystem.
 
-```
-### 中文 [README.md](README.md)
-### English [README_en.md](README_en.md)
-# 04-go-frameworks：Go 主流框架应用模块
-## 模块说明
-本目录涵盖 Go 生态中的主流框架，从 Web 开发到微服务、从命令行工具到桌面应用，提供完整的框架学习路径。每个框架都配备独立的可运行 Demo，展示核心特性与实际应用场景。
-## 主题与目录结构
-```
-04-go-frameworks/
-├── 01-web-frameworks Web框架/
-├── 02-microservices 微服务框架/
-├── 03-high-performance-http 高性能HTTP框架/
-├── 04-cli-frameworks CLI框架/
-├── 05-gui-frameworks GUI框架/
-├── 06-crawler-frameworks 爬虫框架/
-├── 07-orm-frameworks ORM框架/
-└── 08-testing-frameworks 测试框架/
-```
-## 各主题 Demo 清单
-### 01-web-frameworks Web框架
-- Gin（最流行的轻量级Web框架）
-- Echo（高性能Web框架）
-- Fiber（Express.js风格的Web框架）
-- Chi（轻量级路由器）
-### 02-microservices 微服务框架
-- gRPC（Google高性能RPC框架）
-- Kratos（B站开源微服务框架）
-- Kitex（字节跳动微服务RPC框架）
-- go-zero（微服务框架）
-### 03-high-performance-http 高性能HTTP框架
-- gnet（事件驱动网络框架）
-- fasthttp（高性能HTTP实现）
-### 04-cli-frameworks CLI框架
-- Cobra（强大的CLI应用构建库）
-### 05-gui-frameworks GUI框架
-- Wails（现代桌面应用开发框架）
-### 06-crawler-frameworks 爬虫框架
-- Colly（优雅的网络爬虫框架）
-### 07-orm-frameworks ORM框架
-- GORM（功能完整的ORM库）
-- XORM（简单强大的ORM引擎）
-### 08-testing-frameworks 测试框架
-- Testify（丰富的测试工具集）
-- GoConvey（BDD风格测试框架）
-## 运行方式
-### 1. 运行单个 Demo
-```
-# 示例：运行 Gin demo
-cd 01-web-frameworks Web框架/001-demo-gin
-go mod tidy
-go run main.go
-```
-### 2. 微服务类 Demo
-```
-# gRPC 需要先生成代码
-cd 02-microservices 微服务框架/001-demo-grpc
-go generate
-go run server/main.go
-# 另开终端运行客户端
-go run client/main.go
-```
-### 3. GUI 应用 Demo
-```
-cd 05-gui-frameworks GUI框架/001-demo-wails
-wails build
-# 或开发模式
-wails dev
-```
-## 学习建议
-- Web框架建议从 Gin 开始，掌握基础概念后再学习其他框架。
-- 微服务框架需要先理解 RPC 概念，建议先学习 gRPC。
-- 高性能框架适合有一定基础后学习，重点理解性能优化思路。
-- GUI 和爬虫框架可根据实际需求选择性学习。
-- ORM 框架建议结合数据库实践，先掌握 SQL 基础。
-## 配套资源
-- 各框架官方文档链接
-- 性能对比测试结果
-- 最佳实践指南
-```
+## Suggested Next Steps
 
-**README_en.md**
+This chapter intentionally prioritizes lightweight and teachable demos. After finishing it, you can extend the repository with:
 
-```
-### 中文 [README.md](README.md)
-### English [README_en.md](README_en.md)
-# 04-go-frameworks: Go Mainstream Frameworks Module
-## Module Description
-This directory covers mainstream frameworks in the Go ecosystem, from web development to microservices, from command-line tools to desktop applications, providing a complete framework learning path. Each framework comes with independent runnable demos showcasing core features and practical application scenarios.
-## Topics and Directory Structure
-```
-04-go-frameworks/
-├── 01-web-frameworks Web Frameworks/
-├── 02-microservices Microservice Frameworks/
-├── 03-high-performance-http High-Performance HTTP Frameworks/
-├── 04-cli-frameworks CLI Frameworks/
-├── 05-gui-frameworks GUI Frameworks/
-├── 06-crawler-frameworks Crawler Frameworks/
-├── 07-orm-frameworks ORM Frameworks/
-└── 08-testing-frameworks Testing Frameworks/
-```
-## Demo List by Topic
-### 01-web-frameworks Web Frameworks
-- Gin (Most popular lightweight web framework)
-- Echo (High-performance web framework)
-- Fiber (Express.js-style web framework)
-- Chi (Lightweight router)
-### 02-microservices Microservice Frameworks
-- gRPC (Google's high-performance RPC framework)
-- Kratos (Bilibili's open-source microservice framework)
-- Kitex (ByteDance's microservice RPC framework)
-- go-zero (Microservice framework)
-### 03-high-performance-http High-Performance HTTP Frameworks
-- gnet (Event-driven networking framework)
-- fasthttp (High-performance HTTP implementation)
-### 04-cli-frameworks CLI Frameworks
-- Cobra (Powerful CLI application builder)
-### 05-gui-frameworks GUI Frameworks
-- Wails (Modern desktop application development framework)
-### 06-crawler-frameworks Crawler Frameworks
-- Colly (Elegant web scraping framework)
-### 07-orm-frameworks ORM Frameworks
-- GORM (Feature-complete ORM library)
-- XORM (Simple and powerful ORM engine)
-### 08-testing-frameworks Testing Frameworks
-- Testify (Rich testing toolkit)
-- GoConvey (BDD-style testing framework)
-## How to Run
-### 1. Run Individual Demo
-```
-# Example: Run Gin demo
-cd 01-web-frameworks Web Frameworks/001-demo-gin
-go mod tidy
-go run main.go
-```
-### 2. Microservice Demos
-```
-# gRPC requires code generation first
-cd 02-microservices Microservice Frameworks/001-demo-grpc
-go generate
-go run server/main.go
-# Run client in another terminal
-go run client/main.go
-```
-### 3. GUI Application Demo
-```
-cd 05-gui-frameworks GUI Frameworks/001-demo-wails
-wails build
-# Or development mode
-wails dev
-```
-## Learning Recommendations
-- Start with Gin for web frameworks, then learn other frameworks after mastering basic concepts.
-- Microservice frameworks require understanding RPC concepts first; recommend starting with gRPC.
-- High-performance frameworks are suitable for learners with some foundation; focus on understanding performance optimization approaches.
-- GUI and crawler frameworks can be learned selectively based on actual needs.
-- ORM frameworks should be combined with database practice; master SQL basics first.
-## Supporting Resources
-- Official documentation links for each framework
-- Performance comparison test results
-- Best practice guides
+- Web: `Beego`, `Hertz`
+- Microservices: `Kratos`, `Kitex`, `go-zero`
+- High-performance networking: `gnet`
+- ORM: `Ent`
+- Testing: `Ginkgo`
