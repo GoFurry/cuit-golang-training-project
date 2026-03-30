@@ -31,6 +31,9 @@ cuit-golang-training-project/
 ├── 06-coding-exercises/   # Coding Practice & Interview Questions Zone
 │   ├── 01-leetcode/       # LeetCode Go Solutions
 │   └── 02-interview-questions/  # Go Interview Questions & Programming Scenario Problems
+├── 07-opensource-projects/  # Menu for hot opensource projects
+│   ├── project-xxx/
+│   └── README.md
 ├── docs/                  # Supporting Documents
 └── LICENSE                # Open Source License
 ```

@@ -1,6 +1,5 @@
-
-
-### 中文 [README.md](README.md)English [README.md](README.md)
+**Read this in other languages:**
+[English](README_en.md) | [中文](README.md)
 
 ## Learning Path (Recommended Order)
 

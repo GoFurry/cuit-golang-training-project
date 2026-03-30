@@ -1,6 +1,5 @@
-### 中文 [README.md](README.md)
-
-### English [README.md](README_en.md)
+**Read this in other languages:**
+[English](README_en.md) | [中文](README.md)
 
 # 01-go-basics：Go 语言基础语法模块
 

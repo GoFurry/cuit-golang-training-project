@@ -1,6 +1,5 @@
-﻿### 中文 [README.md](README.md)
-
-### English [README_en.md](README_en.md)
+﻿**Read this in other languages:**
+[English](README_en.md) | [中文](README.md)
 
 # 02-go-core：Go 语言核心特性模块
 

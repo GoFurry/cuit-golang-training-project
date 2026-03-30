@@ -31,6 +31,9 @@ cuit-golang-training-project/
 ├── 06-coding-exercises/   # 编程刷题&面试题专区
 │   ├── 01-leetcode/       # 力扣 Go 题解
 │   └── 02-interview-questions/  # Go 面试题 & 编程场景题
+├── 07-opensource-projects/  # 热门开源项目
+│   ├── project-xxx/
+│   └── README.md
 ├── docs/                  # 配套文档
 └── LICENSE                # 开源协议
 ```
