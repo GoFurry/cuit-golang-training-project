@@ -61,7 +61,7 @@ cuit-golang-training-project/
 克隆仓库到本地：
 
 ```
-git clone https://github.com/GoFUrry/cuit-golang-training-project.git
+git clone https://github.com/gofurry/cuit-golang-training-project.git
 ```
 
 进入对应目录，运行 Demo：
